@@ -71,4 +71,3 @@ Thanks to all contributors and supporters!
 
 ---
 
-This version incorporates the fixes I suggested earlier. Let me know if there’s anything else you’d like to adjust! 🚀
