@@ -1,0 +1,146 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 250px;
+}
+.heading
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.m{
+    margin-top:10px ;
+    position: absolute;
+}
+.art{
+    margin-left: 27px;
+}
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+   
+}
+.login{
+  
+   
+    width: 600px;
+    height: 670px;
+    color: white;
+    border-radius: 15px;
+    position: relative;
+   
+   
+   
+}
+.h1-email,.h1-create,.h1-password{
+    font-size: 15px;
+    color: red;
+    display:none;
+}
+.h1-email{
+    display:none;
+}
+.h1-create{
+    display: none;
+}
+.h1-password{
+    display: none;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+
+.login::after , .login::before{
+    content: " ";
+    position: absolute;
+    height: 99%;
+    width: 99%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99,#006aff,#ff0095,#ff4545);
+    top:50%;
+   
+    z-index: -1;
+    border-radius: 15px;
+    padding:7px;
+    left: 50%;
+    translate: -50% -50%;
+    animation: spin 3s infinite linear;
+}
+.login::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+.login::after{
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.login:hover::after{
+    opacity: 1;
+
+}
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
+
+/*----------------content---------------------*/
+.content {
+    display: flex;
+   align-items: center;
+    flex-direction: column;
+    
+}
+.content input{
+    width: 228px;
+    height: 30px;
+    margin-top: 20px;
+    border: none;
+    border-bottom: 2px solid #000;
+    border-radius: 7px;
+}
+.login-btn{
+    width: 100px;
+    height: 40px;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    background-color: orange;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.create{
+    width: 150px;
+    height: 60px;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    background-color: orange;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* ---------------media query---------------*/
+
+@media (max-width: 1200px){
+  .img-container img{
+    display: none;
+  }  
+}
