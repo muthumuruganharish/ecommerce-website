@@ -1,0 +1,906 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "black";
+    src: url("/fonts/BlackNight-R9G66.otf");
+}
+
+/* Main Container */
+.main_container {
+    width: 100%;
+    min-height: 100vh;
+    background: url('../images/shopping.png');
+    background-size: cover;
+    background-blend-mode: darken;
+    position: relative;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 5px;
+   
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 30px;
+}
+
+.logo h1 {
+    color: orange;
+    margin-left: 5px;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+}
+
+.menu img {
+    width: 30px;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.menu img:hover {
+    transform: scale(1.1);
+}
+
+/* Search Bar */
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.searchbox {
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    outline: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.searchbox::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.search img {
+    width: 30px;
+    margin-left: -50px;
+}
+
+/* Brand Section */
+.brand {
+    margin-top: 50px;
+}
+
+.brand-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    animation: appearl1  linear;
+    animation-timeline: view();
+    animation-range:entry 0 cover 40% ;
+
+}
+
+.brand-container img {
+    width: 100px;
+}
+
+.levis {
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.pepe {
+    width: 120px;
+}
+
+/* ---------------------Product Section---------------------- */
+.pics {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pics-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.img-box {
+    position: relative;
+    width: 30%;
+    text-align: center;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range:entry 0 cover 40% ;
+
+}
+
+.img-box img {
+    width: 100%;
+    height: 99%;
+    border-radius: 10px;
+}
+
+.img-text {
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+ 
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 26px;
+    width: 100%;
+    height: 99%;
+}
+
+.img-box :hover.img-text
+{
+    background-color: rgba(247, 149, 92, 0.922);
+    opacity: 0.8;
+    
+    border-radius:10px ;
+    
+
+}
+/*----------shop now button----------*/
+
+.but button{
+    justify-content: center;
+    position: absolute;
+    background-color:rgba(255, 255, 255, 0.5);
+    
+    color: black;
+    border: 3px solid black;
+    padding: 20px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 5px;
+    bottom: 40%;
+    left: 20%;
+}
+.but{
+    margin-top: 20px;
+    
+}
+.but button:hover{
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+
+
+/*-------------------------Middle Section------------------- */
+.headings {
+    display: flex;
+    justify-content: space-between;
+    margin: 7vh 5vh 0 7vh;
+    animation: appearr1  linear;
+    animation-timeline: view();
+    animation-range:entry 0 cover 40% ;
+
+}
+
+.headings h1 {
+    color: orange;
+    transition: all 0.3s ease;
+}
+
+.headings h1:hover {
+    background-color: orange;
+    color: white;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+/* Hot Sales */
+.hot-sales .a1 {
+    display: flex;
+    justify-content: center;
+    animation: appearl1  linear;
+    animation-timeline: view();
+    animation-range:entry 0 cover 40% ;
+}
+
+.hot-sales h1 {
+    margin-top: 15vh;
+    color: white;
+    background-color: black;
+    padding: 20px;
+}
+
+.s1 {
+    display: flex;
+    justify-content: center;
+}
+
+/* --------------Slideshow--------------------- */
+.slideshow {
+    margin-top: 20px;
+    display: flex;
+    min-height: 80vh;
+    width: 60%;
+    border: 8px solid orange;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    position: relative;
+    background: url("images/phone_offer.png") center/cover ;
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range:entry 0 cover 40% ;
+}
+
+.btn {
+    color: black;
+    font-size: 50px;
+}
+
+.btn-left {
+    position: absolute;
+    top: 50%;
+    left: -6%;
+    transform: translateY(-50%);
+}
+
+.btn-right {
+    position: absolute;
+    top: 50%;
+    left: 101%;
+    transform: translateY(-50%);
+}
+
+/* Support Section */
+.support-container {
+    margin-top: 70px;
+}
+
+.support-container img {
+    width: 50px;
+}
+
+.support {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px;
+}
+
+.support h2 {
+    color: orange;
+}
+
+.service {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    animation: appearr1  linear;
+    animation-timeline: view();
+    animation-range:entry 0 cover 40% ;
+}
+
+.service h3 {
+    color: gray;
+}
+
+/* -----------------scroll animation---------------- */
+
+@keyframes appearl1{
+    from{
+        opacity: 0;
+        transform: translate(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+@keyframes appearr1{
+    from{
+        opacity: 0;
+        transform:translate(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0px);
+    }
+
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+
+}
+
+@keyframes appearup{
+    from{
+        opacity: 0;
+        transform: translateY(-100);
+    }
+    to{
+        opacity: 1;
+       transform: translate(0);
+    }
+
+}
+
+/* --------------------------Feature porduct------------------------------*/
+
+.featured-product{
+    margin-top: 80px;
+}
+.f1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.feature-word h1{
+    color: black;
+    font-size: 55px;
+    
+   
+  
+}
+
+.feature-word{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.feature-word h2{
+    color: gray;
+    font-size: 17px;
+    margin-left: 60px;
+}
+.feature-word h1{
+    font-family: "black";
+}
+/* summer container*/
+.summer-container{
+    display: flex;
+    justify-content: space-around;
+    
+   
+}
+.summer-container img{
+    width: 200px;
+    height: 100%;
+
+   
+
+}
+.summer-container div{
+
+   
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range:entry 0 cover 40% ;
+
+}
+.summer-container .s1{
+    margin-left: 20px;
+}
+
+.summer-container .s4{
+    display: flex;
+
+    margin-right: 40px;
+}
+
+.summer-shirt{
+    margin-top: 50px;
+}
+
+.summer-main img{
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+
+.summer-main:hover .but-shopnow button{
+    opacity: 1;
+}
+
+.summer-main{
+    border: 2px solid black;
+}
+
+.fa-star{
+    font-size: 20px;
+    color: rgb(246, 209, 1);
+    
+}
+.star{
+    display: flex;
+    justify-content: center;
+}
+.summer-container .shirt-name h2{
+    color: rgba(71, 68, 68, 0.867);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    font-weight: lighter;
+    
+}
+
+.summer-container .shirt-name p{
+    color: black;
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+
+}
+.but-shopnow{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+ 
+
+}
+.but-shopnow button{
+    
+    transition: opacity 0.3s;
+   
+    color: white;
+    background-color: orange;
+    border-radius: 7px;
+    padding-top:10px ;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    font-size: 17px;
+    border: none;
+    opacity: 0;
+    animation: but27  linear;
+}
+/*-----------------------------------banner----------------------------------------------*/
+
+.banner-container{
+    background: url('../images/fashion.png') no-repeat center center fixed  ;
+    background-size: cover;
+    height: 400px;
+
+
+    width: 100%;
+    display: flex;
+    justify-content:flex-start;
+    align-items:center;
+  
+   
+}
+.banner{
+    position: relative;
+    margin-top: 60px;
+}
+.banner-container div h1{
+    color: white;
+    font-size: 35px;
+
+}
+.design-a1 span{
+    margin-top: 10px;
+  font-weight: lighter;
+    
+}
+.banner-container div{
+    position: absolute;
+  left: 100px;
+}
+.banner-container button{
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.banner-container div h2{
+    color: white;
+    position: absolute;
+    bottom: 160px;
+    left: 10px;
+
+}
+
+/* -----------------gallary----------------------------*/
+
+.gallary-container{
+    
+    margin-top: 80px;
+}
+.g-container1{
+    display: flex;
+    justify-content:space-evenly;
+     
+   
+}
+.g1 {
+    
+    background: linear-gradient(rgba(79, 68, 68, 0.5), rgba(90, 75, 75, 0.5)), url('../images/buyone_getone.png') center ;
+    animation: appearl1  linear;
+    animation-timeline: view();
+    animation-range:entry 0 cover 40% ;
+    
+
+
+    
+
+
+}
+.g1 div button{
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.g1 div{
+  
+   margin-left: 20px;
+       
+}
+.w1{
+    
+}
+.g1, .g2 {
+    width: 50%;
+    height: 400px; /* Set a specific height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover; /* Ensure the image covers the full background */
+    background-position: center; /* Center the background image */
+}
+
+.g2{
+    background:  linear-gradient(rgba(79, 68, 68, 0.5), rgba(90, 75, 75, 0.5)),url('../images/upcomming.png') center center/cover ;
+    margin-left: 20px;
+    animation: appearr1  linear;
+    animation-timeline: view();
+    animation-range:entry 0 cover 40% ;
+    
+
+}
+.g2 div button{
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.g2 div{
+    margin-left: 20px;
+}
+
+
+
+/*---------------------------------g-container2----------------------------*/
+.g-container2 {
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-around;
+   
+   
+
+}
+
+.g3,.g4,.g5 {
+    width: 50%;
+    height: 400px; /* Set a specific height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover; /* Ensure the image covers the full background */
+    background-position: center; /* Center the background image */
+}
+.g3{
+    animation: appearl1  linear;
+    animation-timeline: view();
+    animation-range:entry 0 cover 40% ;
+    
+    background:  linear-gradient(rgba(79, 68, 68, 0.5), rgba(90, 75, 75, 0.5)),url('../images/seasonal_sale.png') center center/cover;
+}
+.g4{
+    margin-left: 10px;
+    margin-right: 10px;
+    background: linear-gradient(rgba(79, 68, 68, 0.5), rgba(90, 75, 75, 0.5)), url(../images/new_footwear.png)center center/cover;
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range:entry 0 cover 40% ;
+    
+}
+
+.g5{
+    animation: appearr1 linear;
+    animation-timeline: view();
+    animation-range:entry 0 cover 40% ;
+    
+    background:  linear-gradient(rgba(79, 68, 68, 0.5), rgba(90, 75, 75, 0.5)),url(../images/shirt_new_trend.png)center center/cover;
+}
+
+
+.g3 div button{
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.g4 div button{
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.g5 div button{
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.g-container1 .w3{
+   font-size: 15px;
+}
+
+/*-----------mail box -----------------*/
+
+    .mail-box {
+        margin-top: 100px;
+        background: linear-gradient(rgba(79, 68, 68, 0.5), rgba(90, 75, 75, 0.5)), url(../images/mailbox.png) fixed;
+        background-size: cover;
+        height: 300px;
+        width: 100%;
+        display: flex;
+    }
+
+    .mail-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 40px;
+        margin-left: 40px;
+        position: relative;
+    }
+
+    .mail-text h1 {
+        color: white;
+        font-size: 40px
+    }
+
+    .mail-text p {
+        color: rgb(223, 214, 214);
+    }
+
+    .sign-up-box {
+        
+        display: flex; /* Corrected display property */
+        flex-direction: row; /* Ensures column layout */
+        justify-content: flex-end; /* Align items to the end of the flex container */
+        align-items: center; /* Ensures the contents are centered along the cross axis */
+        margin-left:auto;
+        margin-right: 100px;
+    }
+    .sign-up-box input{
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .sign-up-box button{
+        background-color: orange;
+        border: none;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-weight: bolder;
+
+
+    }
+
+/*----------footer----------------*/
+
+.footer{
+   
+  
+    margin-top: 100px;
+}
+.footer-container{
+ 
+    
+    display: flex;
+    justify-content: space-evenly;
+}
+.about-footer{
+   
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+
+.fa-fonts{
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 10px;
+   
+}
+.fa-brands{
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.services-footer,.resource-footer,.support-footer{
+    display: flex;
+
+   
+    margin-top: 40px;
+    flex-direction: column;
+    color: white;
+    margin-left: 200px;
+    margin-right: 60px;
+}
+
+.resource-footer{
+  
+    left: 900px;
+}
+
+.support-footer{
+    left: 1000px;
+
+}
+
+@media (max-width: 1200px) {
+    .footer-container {
+        justify-content: center;
+    }
+
+    .about-footer, .services-footer, .resource-footer, .support-footer {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-footer, .services-footer, .resource-footer, .support-footer {
+        flex: 1 1 100%;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+    .g-container2{
+      flex-wrap: wrap;
+    }
+
+    .mail-text h1{
+        margin-top: 20px;
+        font-size: 30px;
+        margin-bottom: 10px;
+        
+       
+    }
+    .mail-box{
+        display: flex;
+        flex-direction: column;
+    }
+    .summer-container{
+        overflow-x: scroll;
+    }
+    .summer-container div{
+        animation:none
+
+    }
+
+    .support{
+        flex-wrap: wrap;
+    }
+    .headings{
+        display: none;
+    }
+}
+
