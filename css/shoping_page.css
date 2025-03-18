@@ -112,3 +112,6 @@
     position: absolute;
     transition: transform 0.3s ease;
 }
+.types1, .types2, .types3{
+    display: none;
+}
