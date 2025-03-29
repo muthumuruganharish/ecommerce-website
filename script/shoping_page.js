@@ -14,10 +14,12 @@ document.addEventListener('DOMContentLoaded', function () {
     gender_header.addEventListener("click", function () {
         const gender_type = document.querySelector(".gender-container .types1")
     
-        if (gender_type.style.display === "none" || gender_type.style.display === "") {
-            gender_type.style.display = "block";
+        if (gender_type.style.visibility === "hidden" || gender_type.style.visibility === "") {
+            gender_type.style.visibility = "visible";
+            gender_type.style.height = "auto";
         } else {
-            gender_type.style.display = "none";
+            gender_type.style.visibility = "hidden";
+            gender_type.style.height = "0";
         }
     })
 
@@ -26,10 +28,12 @@ document.addEventListener('DOMContentLoaded', function () {
     color_header.addEventListener("click", function () {
         const color_type = document.querySelector(".color .types2")
 
-        if (color_type.style.display === "none" || color_type.style.display === "") {
-            color_type.style.display = "block";
+        if (color_type.style.visibility === "hidden" || color_type.style.visibility === "") {
+            color_type.style.visibility = "visible";
+            color_type.style.height = "auto";
         } else {
-            color_type.style.display = "none";
+            color_type.style.visibility = "hidden";
+            color_type.style.height = "0";
         }
     })
 
@@ -37,10 +41,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const price_header = document.querySelector(".price .g1 h2")
     price_header.addEventListener("click", function () {
         const price_type = document.querySelector(".price .types3")
-        if (price_type.style.display === "none" || price_type.style.display === "") {
-            price_type.style.display = "block";
+        if (price_type.style.visibility === "hidden" || price_type.style.visibility === "") {
+            price_type.style.visibility = "visible";
+            price_type.style.height = "auto";
         } else {
-            price_type.style.display = "none";
+            price_type.style.visibility = "hidden";
+            price_type.style.height = "0";
         }
     })
 })
