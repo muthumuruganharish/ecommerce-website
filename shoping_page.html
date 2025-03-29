@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/shoping_page.css">
 </head>
 
@@ -55,13 +58,21 @@
                     <div class="g1">
                         <h2>Gender <span><img class="down-arrow" src="/images/right-chevron.png" alt=""></span></h2>
                     </div>
-
                     <div class="types1">
-                        <h3>male</h3>
-                        <h3>female</h3>
-                    </div>
+                        <div style="display: flex;">
+                            <input type="radio" class="filter-gender " name="gender" value="male"
+                                style="cursor: pointer;">
+                            <h3 style="margin-top:10px ;"> Male</h3>
+                        </div>
 
+                        <div style="display: flex;">
+                            <input type="radio" class="filter-gender " name="gender" value="female"
+                                style="cursor: pointer;">
+                            <h3 style="margin-top:10px ;"> Female</h3>
+                        </div>
+                    </div>
                 </div>
+
                 <!------------color----------------------------------------------------------->
                 <div class="color">
                     <div class="g1">
@@ -69,8 +80,23 @@
                     </div>
 
                     <div class="types2">
-                        <h3>white</h3>
-                        <h3>black</h3>
+                        <div style="display: flex;">
+                            <input type="radio" class="filter-color" value="white " name="color"
+                                style="cursor: pointer;">
+                            <h3 style="margin-top:10px ;">white</h3>
+                        </div>
+                        <div style="display: flex;">
+                            <input type="radio" class="filter-color" value="black " name="color"
+                                style="cursor: pointer;">
+                            <h3 style="margin-top:10px ;">black</h3>
+                        </div>
+
+                        <div style="display: flex;">
+                            <input type="radio" class="filter-color" value="none " name="color"
+                            style="cursor: pointer;"><h3  style="margin-top:10px ;">None</h3>
+
+                        </div>
+                      
 
 
                     </div>
@@ -84,12 +110,33 @@
                     <div class="g1">
                         <h2>price <span><img class="down-arrow3" src="/images/right-chevron.png" alt=""></span></h2>
                     </div>
-                    
+
                     <div class="types3">
-                        <h3>0-500rs</h3>
-                        <h3>500-1000rs</h3>
-                        <h3>1000-1500rs</h3>
-                        <h3>1500-2000rs</h3>
+
+                        <div style="display: flex;">
+                            <input type="radio" class="filter-price" value=" rs500" name="rs"
+                            style="cursor: pointer;"><h3 style="margin-top:10px ;">0-500rs</h3>
+                        </div>
+                        <div style="display: flex;">
+                            <input type="radio" class="filter-price" value="rs1000" name="rs"
+                            style="cursor: pointer;"><h3  style="margin-top:10px ;">500-1000rs</h3>
+
+                        </div>
+                       
+                        <div style="display: flex;">
+                            <input type="radio" class="filter-price" value="rs1500" name="rs"
+                            style="cursor: pointer;"><h3  style="margin-top:10px ;">1000-1500rs</h3>
+                        </div>
+                        
+
+                        <div style="display: flex;">
+
+                            <input type="radio" class="filter-price" value="rs2000" name="rs"
+                            style="cursor: pointer;"><h3 style="margin-top:10px ;">1500-2000rs</h3>
+
+                        </div>
+                       
+
 
 
                     </div>
@@ -107,18 +154,426 @@
 
 
 
-            <!----------------------------------------------------rightside----------------------------------------------------------->
 
-            <div class="rightside">
 
-            </div>
 
 
 
         </div>
 
+        <!----------------------------------------------------bottomside----------------------------------------------------------->
 
-        <script src="/script/shoping_page.js"></script>
+        <div class="bottomside" style="display: flex;">
+
+
+            <!-------------------shirt1--------------------->
+            <div class="summer-main">
+                <img src="images/shirt2.png" alt="" class="s1">
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <div class="shirt-name">
+
+                    <h2>shirt 1</h2>
+
+                    <p>1000 rs</p>
+
+                    <div class="but-shopnow"> <button> Shop now</button></div>
+
+
+                </div>
+
+
+
+
+
+            </div>
+            <!-------------------shirt2--------------------->
+            <div class="summer-main">
+                <img src="images/white_shirt1.png" alt="" class="s1">
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <div class="shirt-name">
+
+                    <h2>shirt 1</h2>
+
+                    <p>1000 rs</p>
+
+                    <div class="but-shopnow"> <button> Shop now</button></div>
+
+
+                </div>
+
+
+
+
+
+            </div>
+            <!-------------------shirt3--------------------->
+            <div class="summer-main">
+
+                <img src="images/shirt3.png" alt="" class="s2">
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke" style="color: gold;font-size:20px;"></i>
+                </div>
+                <div class="shirt-name">
+
+                    <h2>shirt 1</h2>
+
+                    <p>1000 rs</p>
+
+                    <div class="but-shopnow"> <button> Shop now</button></div>
+
+
+                </div>
+
+
+
+            </div>
+            <!------------shirt4--------------------------------------------->
+
+            <div class="summer-main">
+
+                <img src="images/shirt4.png" alt="" class="s3">
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="shirt-name">
+
+                    <h2>shirt 1</h2>
+
+                    <p>1000 rs</p>
+
+                    <div class="but-shopnow"> <button> Shop now</button></div>
+
+
+                </div>
+
+
+
+            </div>
+
+            <!-------------------------shirt5-------------------------------------->
+
+            <div class="summer-main">
+                <img src="images/shirt5.png" alt="" class="s4">
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="shirt-name">
+
+                    <h2>shirt 1</h2>
+
+                    <p>1000 rs</p>
+
+                    <div class="but-shopnow"> <button> Shop now</button></div>
+
+
+                </div>
+
+
+            </div>
+            <!-------------------------shirt6-------------------------------------->
+            <div class="summer-main">
+                <img src="images/white_shirt2.png" alt="" class="s1">
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <div class="shirt-name">
+
+                    <h2>shirt 1</h2>
+
+                    <p>1000 rs</p>
+
+                    <div class="but-shopnow"> <button> Shop now</button></div>
+
+
+                </div>
+
+
+
+
+
+            </div>
+            <!-------------------------shirt7-------------------------------------->
+
+            <div class="summer-main">
+                <img src="images/white_shirt3.png" alt="" class="s1">
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <div class="shirt-name">
+
+                    <h2>shirt 1</h2>
+
+                    <p>1000 rs</p>
+
+                    <div class="but-shopnow"> <button> Shop now</button></div>
+
+
+                </div>
+
+
+
+
+
+            </div>
+            <!-------------------------shirt8-------------------------------------->
+
+            <div class="summer-main">
+                <img src="images/red_shirt1.png" alt="" class="s1">
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <div class="shirt-name">
+
+                    <h2>shirt 1</h2>
+
+                    <p>1000 rs</p>
+
+                    <div class="but-shopnow"> <button> Shop now</button></div>
+
+
+                </div>
+
+
+
+
+
+            </div>
+            <!-------------------------shirt9-------------------------------------->
+            <div class="summer-main">
+                <img src="images/checked_whiteshirt.png" alt="" class="s1">
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <div class="shirt-name">
+
+                    <h2>shirt 1</h2>
+
+                    <p>1000 rs</p>
+
+                    <div class="but-shopnow"> <button> Shop now</button></div>
+
+
+                </div>
+
+
+
+
+
+            </div>
+            <!-------------------------shirt10-------------------------------------->
+            <div class="summer-main">
+                <img src="images/black_shirt1.png" alt="" class="s1">
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <div class="shirt-name">
+
+                    <h2>shirt 1</h2>
+
+                    <p>1000 rs</p>
+
+                    <div class="but-shopnow"> <button> Shop now</button></div>
+
+
+                </div>
+
+
+
+
+
+            </div>
+            <!-------------------------shirt11-------------------------------------->
+            <div class="summer-main">
+                <img src="images/black_shirt2.png" alt="" class="s1">
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <div class="shirt-name">
+
+                    <h2>shirt 1</h2>
+
+                    <p>1000 rs</p>
+
+                    <div class="but-shopnow"> <button> Shop now</button></div>
+
+
+                </div>
+
+
+
+
+
+            </div>
+            <!-------------------------shirt12-------------------------------------->
+            <div class="summer-main">
+                <img src="images/black_checkedshirt.png" alt="" class="s1">
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <div class="shirt-name">
+
+                    <h2>shirt 1</h2>
+
+                    <p>1000 rs</p>
+
+                    <div class="but-shopnow"> <button> Shop now</button></div>
+
+
+                </div>
+
+
+
+
+
+            </div>
+            <!-------------------------shirt13-------------------------------------->
+            <div class="summer-main">
+                <img src="images/red_checkedshirt.png" alt="" class="s1">
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <div class="shirt-name">
+
+                    <h2>shirt 1</h2>
+
+                    <p>1000 rs</p>
+
+                    <div class="but-shopnow"> <button> Shop now</button></div>
+
+
+                </div>
+
+
+
+
+
+            </div>
+            <!-------------------------shirt14-------------------------------------->
+            <div class="summer-main">
+                <img src="images/white_shirt_women.png" alt="" class="s1">
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <div class="shirt-name">
+
+                    <h2>shirt 1</h2>
+
+                    <p>1000 rs</p>
+
+                    <div class="but-shopnow"> <button> Shop now</button></div>
+
+
+                </div>
+
+
+
+
+
+            </div>
+            <!-------------------------shirt15-------------------------------------->
+            <div class="summer-main">
+                <img src="images/black_shirt_women.png" alt="" class="s1">
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <div class="shirt-name">
+
+                    <h2>shirt 1</h2>
+
+                    <p>1000 rs</p>
+
+                    <div class="but-shopnow"> <button> Shop now</button></div>
+
+
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="/script/shoping_page.js"></script>
 </body>
 
 </html>
