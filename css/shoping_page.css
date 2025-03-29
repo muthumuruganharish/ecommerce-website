@@ -76,6 +76,15 @@
 
 .leftside{
     margin-left: 30px;
+   
+}
+.left-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.price{
+    margin-right: 100px;
 }
 .down-arrow{
     width: 25px;
@@ -111,7 +120,182 @@
     margin-top: 1px;
     position: absolute;
     transition: transform 0.3s ease;
+   
 }
 .types1, .types2, .types3{
-    display: none;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    background-color:rgba(0, 0, 0, 0.7);
+    color: white;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    z-index: 2;
+    position: absolute;
+    transition: max-height 0.5s ease;
+  
+   
+    transition: max-height 0.5s ease;
+}
+.types1 h3, .types2 h3, .types3 h3{
+  
+
+    cursor: pointer;
+  
+    margin-top: -10px;
+    
+    padding-bottom: 30px;
+    padding-bottom: 10px
+}
+
+.types1 h3:hover, .types2 h3:hover, .types3 h3:hover {
+    color: orange;
+    
+    transition: color 0.3s ease;
+    
+
+   
+   
+}
+.types1 h3:not(:last-child), .types2 h3:not(:last-child), .types3 h3:not(:last-child) {
+    margin-bottom: 15px;
+   
+}
+/*------------------bottom-side-----------------*/
+
+.bottomside{
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: stretch;
+}
+
+.summer-container{
+    display: flex;
+   
+    
+    
+   
+}
+.summer-container img{
+    width: 200px;
+    height: 100%;
+
+   
+
+}
+.summer-container div{
+
+   
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range:entry 0 cover 40% ;
+
+}
+.summer-container .s1{
+    margin-left: 20px;
+}
+
+.summer-container .s4{
+    display: flex;
+
+    margin-right: 40px;
+}
+
+.summer-shirt{
+    margin-top: 50px;
+   
+    
+}
+
+.summer-main img{
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+
+.summer-main:hover .but-shopnow button{
+    opacity: 1;
+}
+
+.summer-main{
+    border: 2px solid black;
+    flex: 1 1 calc(25% - 10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+   
+}
+
+.fa-star{
+    font-size: 20px;
+    color: rgb(246, 209, 1);
+    
+}
+.star{
+    display: flex;
+    justify-content: center;
+}
+.shirt-name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.summer-container .shirt-name h2{
+    color: rgba(71, 68, 68, 0.867);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    font-weight: lighter;
+    
+}
+
+.summer-container .shirt-name p{
+    color: black;
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+
+
+}
+.but-shopnow{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+ 
+
+}
+.but-shopnow button{
+    
+    transition: opacity 0.3s;
+   
+    color: white;
+    background-color: orange;
+    border-radius: 7px;
+    padding-top:10px ;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    font-size: 17px;
+    border: none;
+    opacity: 0;
+    animation: but27  linear;
+}
+.bottom-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
