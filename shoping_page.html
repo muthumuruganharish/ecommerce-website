@@ -60,15 +60,20 @@
                     </div>
                     <div class="types1">
                         <div style="display: flex;">
-                            <input type="radio" class="filter-gender " name="gender" value="male"
+                            <input type="radio" class="filter " name="filter1" value="male"
                                 style="cursor: pointer;">
                             <h3 style="margin-top:10px ;"> Male</h3>
                         </div>
 
                         <div style="display: flex;">
-                            <input type="radio" class="filter-gender " name="gender" value="female"
+                            <input type="radio" class="filter " name="filter1" value="female"
                                 style="cursor: pointer;">
                             <h3 style="margin-top:10px ;"> Female</h3>
+                        </div>
+                        <div style="display: flex;">
+                            <input type="radio" class="filter " name="filter1" value="none"
+                                style="cursor: pointer;" checked>
+                            <h3 style="margin-top:10px ;"> None</h3>
                         </div>
                     </div>
                 </div>
@@ -81,18 +86,28 @@
 
                     <div class="types2">
                         <div style="display: flex;">
-                            <input type="radio" class="filter-color" value="white " name="color"
+                            <input type="radio" class="filter" value="white" name="color"
                                 style="cursor: pointer;">
-                            <h3 style="margin-top:10px ;">white</h3>
+                            <h3 style="margin-top:10px ;">White</h3>
                         </div>
                         <div style="display: flex;">
-                            <input type="radio" class="filter-color" value="black " name="color"
+                            <input type="radio" class="filter" value="black" name="color"
                                 style="cursor: pointer;">
-                            <h3 style="margin-top:10px ;">black</h3>
+                            <h3 style="margin-top:10px ;">Black</h3>
+                        </div>
+                        <div style="display: flex;">
+                            <input type="radio" class="filter" value="red" name="color"
+                                style="cursor: pointer;">
+                            <h3 style="margin-top:10px ;">Red</h3>
+                        </div>
+                        <div style="display: flex;">
+                            <input type="radio" class="filter" value="summer" name="color"
+                                style="cursor: pointer;">
+                            <h3 style="margin-top:10px ;"> Stylish</h3>
                         </div>
 
                         <div style="display: flex;">
-                            <input type="radio" class="filter-color" value="none " name="color"
+                            <input type="radio" class="filter" value="none" name="color"
                             style="cursor: pointer;"><h3  style="margin-top:10px ;">None</h3>
 
                         </div>
@@ -114,25 +129,31 @@
                     <div class="types3">
 
                         <div style="display: flex;">
-                            <input type="radio" class="filter-price" value=" rs500" name="rs"
+                            <input type="radio" class="filter" value="rs500" name="rs"
                             style="cursor: pointer;"><h3 style="margin-top:10px ;">0-500rs</h3>
                         </div>
                         <div style="display: flex;">
-                            <input type="radio" class="filter-price" value="rs1000" name="rs"
+                            <input type="radio" class="filter" value="rs1000" name="rs"
                             style="cursor: pointer;"><h3  style="margin-top:10px ;">500-1000rs</h3>
 
                         </div>
                        
                         <div style="display: flex;">
-                            <input type="radio" class="filter-price" value="rs1500" name="rs"
+                            <input type="radio" class="filter" value="rs1500" name="rs"
                             style="cursor: pointer;"><h3  style="margin-top:10px ;">1000-1500rs</h3>
                         </div>
                         
 
                         <div style="display: flex;">
 
-                            <input type="radio" class="filter-price" value="rs2000" name="rs"
+                            <input type="radio" class="filter" value="rs2000" name="rs"
                             style="cursor: pointer;"><h3 style="margin-top:10px ;">1500-2000rs</h3>
+
+                        </div>
+                        <div style="display: flex;">
+
+                            <input type="radio" class="filter" value="none" name="rs"
+                            style="cursor: pointer;"><h3 style="margin-top:10px ;">None</h3>
 
                         </div>
                        
@@ -167,7 +188,7 @@
 
 
             <!-------------------shirt1--------------------->
-            <div class="summer-main">
+            <div class="summer-main male"  data-color="summer" data-rs="750">
                 <img src="images/shirt2.png" alt="" class="s1">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -181,7 +202,7 @@
 
                     <h2>shirt 1</h2>
 
-                    <p>1000 rs</p>
+                    <p>750rs</p>
 
                     <div class="but-shopnow"> <button> Shop now</button></div>
 
@@ -194,7 +215,7 @@
 
             </div>
             <!-------------------shirt2--------------------->
-            <div class="summer-main">
+            <div class="summer-main male" data-color="white" data-rs="400">
                 <img src="images/white_shirt1.png" alt="" class="s1">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -206,9 +227,9 @@
 
                 <div class="shirt-name">
 
-                    <h2>shirt 1</h2>
+                    <h2>shirt 2</h2>
 
-                    <p>1000 rs</p>
+                    <p>400 rs</p>
 
                     <div class="but-shopnow"> <button> Shop now</button></div>
 
@@ -221,7 +242,7 @@
 
             </div>
             <!-------------------shirt3--------------------->
-            <div class="summer-main">
+            <div class="summer-main male" data-color="white" data-rs="1000">
 
                 <img src="images/shirt3.png" alt="" class="s2">
                 <div class="star">
@@ -233,7 +254,7 @@
                 </div>
                 <div class="shirt-name">
 
-                    <h2>shirt 1</h2>
+                    <h2>shirt 3</h2>
 
                     <p>1000 rs</p>
 
@@ -247,7 +268,7 @@
             </div>
             <!------------shirt4--------------------------------------------->
 
-            <div class="summer-main">
+            <div class="summer-main male" data-color="summer" data-rs="900">
 
                 <img src="images/shirt4.png" alt="" class="s3">
                 <div class="star">
@@ -259,9 +280,9 @@
                 </div>
                 <div class="shirt-name">
 
-                    <h2>shirt 1</h2>
+                    <h2>shirt 4</h2>
 
-                    <p>1000 rs</p>
+                    <p>900 rs</p>
 
                     <div class="but-shopnow"> <button> Shop now</button></div>
 
@@ -274,7 +295,7 @@
 
             <!-------------------------shirt5-------------------------------------->
 
-            <div class="summer-main">
+            <div class="summer-main male" data-color="summer" data-rs="1000"> >
                 <img src="images/shirt5.png" alt="" class="s4">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -285,7 +306,7 @@
                 </div>
                 <div class="shirt-name">
 
-                    <h2>shirt 1</h2>
+                    <h2>shirt 5</h2>
 
                     <p>1000 rs</p>
 
@@ -297,7 +318,7 @@
 
             </div>
             <!-------------------------shirt6-------------------------------------->
-            <div class="summer-main">
+            <div class="summer-main male" data-color="white" data-rs="1250">
                 <img src="images/white_shirt2.png" alt="" class="s1">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -309,9 +330,9 @@
 
                 <div class="shirt-name">
 
-                    <h2>shirt 1</h2>
+                    <h2>shirt 6</h2>
 
-                    <p>1000 rs</p>
+                    <p>1250 rs</p>
 
                     <div class="but-shopnow"> <button> Shop now</button></div>
 
@@ -325,7 +346,7 @@
             </div>
             <!-------------------------shirt7-------------------------------------->
 
-            <div class="summer-main">
+            <div class="summer-main male" data-color="white" data-rs="1790">
                 <img src="images/white_shirt3.png" alt="" class="s1">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -337,9 +358,9 @@
 
                 <div class="shirt-name">
 
-                    <h2>shirt 1</h2>
+                    <h2>shirt 7</h2>
 
-                    <p>1000 rs</p>
+                    <p>1790 rs</p>
 
                     <div class="but-shopnow"> <button> Shop now</button></div>
 
@@ -353,7 +374,7 @@
             </div>
             <!-------------------------shirt8-------------------------------------->
 
-            <div class="summer-main">
+            <div class="summer-main male" data-color="red"   data-rs="1300">
                 <img src="images/red_shirt1.png" alt="" class="s1">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -365,9 +386,9 @@
 
                 <div class="shirt-name">
 
-                    <h2>shirt 1</h2>
+                    <h2>shirt 8</h2>
 
-                    <p>1000 rs</p>
+                    <p>1300 rs</p>
 
                     <div class="but-shopnow"> <button> Shop now</button></div>
 
@@ -380,7 +401,7 @@
 
             </div>
             <!-------------------------shirt9-------------------------------------->
-            <div class="summer-main">
+            <div class="summer-main male" data-color="white" data-rs="999"> >
                 <img src="images/checked_whiteshirt.png" alt="" class="s1">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -392,9 +413,9 @@
 
                 <div class="shirt-name">
 
-                    <h2>shirt 1</h2>
+                    <h2>shirt 9</h2>
 
-                    <p>1000 rs</p>
+                    <p>999 rs</p>
 
                     <div class="but-shopnow"> <button> Shop now</button></div>
 
@@ -407,7 +428,7 @@
 
             </div>
             <!-------------------------shirt10-------------------------------------->
-            <div class="summer-main">
+            <div class="summer-main male" data-color="black" data-rs="1990">
                 <img src="images/black_shirt1.png" alt="" class="s1">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -419,9 +440,9 @@
 
                 <div class="shirt-name">
 
-                    <h2>shirt 1</h2>
+                    <h2>shirt 10</h2>
 
-                    <p>1000 rs</p>
+                    <p>1990rs</p>
 
                     <div class="but-shopnow"> <button> Shop now</button></div>
 
@@ -434,7 +455,7 @@
 
             </div>
             <!-------------------------shirt11-------------------------------------->
-            <div class="summer-main">
+            <div class="summer-main male" data-color="black" data-rs="600">
                 <img src="images/black_shirt2.png" alt="" class="s1">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -446,9 +467,9 @@
 
                 <div class="shirt-name">
 
-                    <h2>shirt 1</h2>
+                    <h2>shirt 11</h2>
 
-                    <p>1000 rs</p>
+                    <p>600 rs</p>
 
                     <div class="but-shopnow"> <button> Shop now</button></div>
 
@@ -461,7 +482,7 @@
 
             </div>
             <!-------------------------shirt12-------------------------------------->
-            <div class="summer-main">
+            <div class="summer-main male" data-color="black" data-rs="1100">
                 <img src="images/black_checkedshirt.png" alt="" class="s1">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -473,9 +494,9 @@
 
                 <div class="shirt-name">
 
-                    <h2>shirt 1</h2>
+                    <h2>shirt 12</h2>
 
-                    <p>1000 rs</p>
+                    <p>1100 rs</p>
 
                     <div class="but-shopnow"> <button> Shop now</button></div>
 
@@ -488,7 +509,7 @@
 
             </div>
             <!-------------------------shirt13-------------------------------------->
-            <div class="summer-main">
+            <div class="summer-main male " data-color="red" data-rs="900">
                 <img src="images/red_checkedshirt.png" alt="" class="s1">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -500,9 +521,9 @@
 
                 <div class="shirt-name">
 
-                    <h2>shirt 1</h2>
+                    <h2>shirt 13</h2>
 
-                    <p>1000 rs</p>
+                    <p>900 rs</p>
 
                     <div class="but-shopnow"> <button> Shop now</button></div>
 
@@ -515,7 +536,7 @@
 
             </div>
             <!-------------------------shirt14-------------------------------------->
-            <div class="summer-main">
+            <div class="summer-main female" data-color="white" data-rs="1800">
                 <img src="images/white_shirt_women.png" alt="" class="s1">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -527,9 +548,9 @@
 
                 <div class="shirt-name">
 
-                    <h2>shirt 1</h2>
+                    <h2>shirt 14</h2>
 
-                    <p>1000 rs</p>
+                    <p>1800 rs</p>
 
                     <div class="but-shopnow"> <button> Shop now</button></div>
 
@@ -542,7 +563,7 @@
 
             </div>
             <!-------------------------shirt15-------------------------------------->
-            <div class="summer-main">
+            <div class="summer-main female" data-color="black" data-rs="1000" >
                 <img src="images/black_shirt_women.png" alt="" class="s1">
                 <div class="star">
                     <i class="fa-solid fa-star"></i>
@@ -554,7 +575,7 @@
 
                 <div class="shirt-name">
 
-                    <h2>shirt 1</h2>
+                    <h2>shirt 15</h2>
 
                     <p>1000 rs</p>
 
