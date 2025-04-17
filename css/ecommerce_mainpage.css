@@ -7,12 +7,16 @@
     font-family: "black";
     src: url("/fonts/BlackNight-R9G66.otf");
 }
+@font-face {
+    font-family: "bold";
+    src: url("/fonts/SampleDaily-1jMWj.otf");
+}
 
 /* Main Container */
 .main_container {
     width: 100%;
     min-height: 100vh;
-    background: url('../images/shopping.png');
+     background: #141218 url('../images/shopping.png') no-repeat center center/cover;
     background-size: cover;
     background-blend-mode: darken;
     position: relative;
@@ -69,6 +73,26 @@
 .menu img:hover {
     transform: scale(1.1);
 }
+
+
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    
+    .p1 {
+        animation: fadeIn 3s ease-in-out;
+        font-size: 1.2rem;
+        color: #FFFFFF;
+    }
+
+
+/* ------------------Shop Now Button------------ */
+
+
+
+
+
 
 /* Search Bar */
 .search {
@@ -135,7 +159,106 @@
 .pepe {
     width: 120px;
 }
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+* {
+  margin: 0;
+}
+.wrapper{
+    margin-top: 4rem;
+}
+.wrapper1{
+    margin-top: 1rem;
+}
+.wrapper,.wrapper1 {
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 100px;
+
+  overflow: hidden;/*we use this because outside the wrapper container all should hide*/
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );/*we are using this for to fade both left and right corners*/
+}
+.wrapper:hover .item  {
+          animation-play-state: paused;
+        } /*to pause animation*/
+        .wrapper1:hover .itemr  {
+          animation-play-state: paused;
+        } /*to pause animation*/
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+@keyframes scrollRight {
+    to {
+      right: -200px;
+    }
+  }
+  
+.itemr {
+    right: max(calc(200px * 8), calc(100% + 200px));
+    animation-name: scrollRight;
+  }
+  .item{
+    animation-name: scrollLeft;
+    left: max(calc(200px * 8), 100%);
+  }
+
+.item,.itemr {
+  width: 100px;
+  height: 50px;
+ 
+  border-radius: 6px;
+  position: absolute;
+  /*which is used for the animation works good at small screen and large screen*/
+  
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.item1 {
+  animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+
+.item2 {
+  animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+
+.item3 {
+  animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+
+.item4 {
+  animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+
+.item5 {
+  animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.item6 {
+  animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.item7 {
+  animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.item8 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
 /* ---------------------Product Section---------------------- */
 .pics {
     margin-top: 30px;
@@ -410,7 +533,7 @@
 .feature-word h1{
     font-family: "black";
 }
-/* summer container*/
+/* --------------------summer container--------------------------*/
 .summer-container{
     display: flex;
     justify-content: space-around;
@@ -904,3 +1027,4 @@
     }
 }
 
+/*-------------------------------------- buton animation---------------*/
