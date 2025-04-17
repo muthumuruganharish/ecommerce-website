@@ -9,6 +9,224 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/ecommerce_mainpage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;900&display=swap" rel="stylesheet">
+    <style>
+        ::-webkit-scrollbar {
+            width: 10px;
+
+
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background:linear-gradient(
+            319deg, #f88379 0%, #fd9600 37%, #ffb347 100%);
+           
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #141218;
+            
+        }
+
+        :root {
+            --text-color: hsla(210, 50%, 85%, 1);
+            --shadow-color: hsla(210, 40%, 52%, 0.4);
+            --btn-color: hsl(210, 80%, 42%);
+            --bg-color: #141218;
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button-container button {
+            position: relative;
+            padding: 10px 20px;
+            border: none;
+            background: none;
+            cursor: pointer;
+
+            font-family: "Source Code Pro", monospace;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 30px;
+            color: var(--text-color);
+
+            background-color: rgb(192, 135, 29);
+            box-shadow: rgb(192, 135, 29) 2px 2px 22px;
+            border-radius: 4px;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .button-container button:focus {
+            outline-color: transparent;
+            box-shadow: var(--btn-color) 2px 2px 22px;
+        }
+
+        .button-container .right::after,
+        .button-container button::after {
+            content: var(--content);
+            display: block;
+            position: absolute;
+            white-space: nowrap;
+            padding: 40px 40px;
+            pointer-events: none;
+        }
+
+        .button-container button::after {
+            font-weight: 200;
+            top: -30px;
+            left: -20px;
+        }
+
+        .button-container .right,
+        .button-container .left {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+        }
+
+        .button-container .right {
+            left: 66%;
+        }
+
+        .button-container .left {
+            right: 66%;
+        }
+
+        .button-container .right::after {
+            top: -30px;
+            left: calc(-66% - 20px);
+
+            background-color: var(--bg-color);
+            color: transparent;
+            transition: transform 0.4s ease-out;
+            transform: translate(0, -90%) rotate(0deg);
+        }
+
+        .button-container button:hover .right::after {
+            transform: translate(0, -47%) rotate(0deg);
+        }
+
+        .button-container button .right:hover::after {
+            transform: translate(0, -50%) rotate(-7deg);
+        }
+
+        .button-container button .left:hover~.right::after {
+            transform: translate(0, -50%) rotate(7deg);
+        }
+
+        /* Bubbles */
+        .button-container button::before {
+            content: '';
+            pointer-events: none;
+            opacity: 0.6;
+            background:
+                radial-gradient(circle at 20% 35%, transparent 0, transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+                radial-gradient(circle at 75% 44%, transparent 0, transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+                radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+
+            width: 100%;
+            height: 300%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            animation: bubbles 5s linear infinite both;
+        }
+
+        @keyframes bubbles {
+            from {
+                transform: translate();
+            }
+
+            to {
+                transform: translate(0, -66.666%);
+            }
+        }
+
+        .cv1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* Full viewport height */
+            background-color: var(--bg-color);
+            /* Optional: Add a background color */
+        }
+
+        .cv1 button {
+            margin: 0 auto;
+            /* Center the button horizontally */
+        }
+
+        .hero-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 50vh;
+            /* Adjust height as needed */
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(20, 18, 24, 1)), url('images/hero-background.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-family: "Source Code Pro", monospace;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .hero-button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            background-color: var(--btn-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: var(--shadow-color) 2px 2px 22px;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero-button:hover {
+            background-color: hsl(210, 90%, 50%);
+        }
+
+        .design1 {
+            font-family: "bold";
+            color: orange;
+        }
+
+        h1:hover .design1 {
+            text-shadow: 0 0 5px orange, 0 0 10px orange;
+        }
+
+        .design1 {
+            font-family: "bold";
+            color: orange;
+            transition: text-shadow 0.5s ease-in-out;
+        }
+
+
+        @keyframes scrollRight {
+            to {
+                right: -200px;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -23,30 +241,60 @@
 
             <div class="menu">
                 <img src="images/shopping-cart.png" alt="">
-               <a href="ecommerce_login.html" > <img src="images/user.png" alt="" href=""></a>
+                <a href="ecommerce_login.html"> <img src="images/user.png" alt="" href=""></a>
                 <img src="images/setting.png" alt="">
             </div>
         </div>
 
-        <div class="search">
-            <div class="search-container">
-                <input type="text" class="searchbox" placeholder="Search what you want....">
-                <img src="images/search.png" alt="">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>Welcome to <span class="design1">Easy Mart</span> </h1>
+
+
+                <p class="p1">Discover everything you need, all in one place.<br>Explore <span class="d2"
+                        style="color: orange;">fashion, electronics, and
+                        home essentials,</span> all delivered to your doorstep with love. Ready to make your dreams come
+                    true? 🌟
+                </p>
+
+                <div class="button-container">
+                    <a href="/shoping_page.html">
+                        <button style="--content: 'Shop Now!';">
+                            <div class="left"></div>
+                            Shop Now!
+                            <div class="right"></div>
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
 
+
     </div>
 
-    <div class="brand">
-        <div class="brand-container">
-            <img class="adidas" src="images/adidas.png" alt="">
-            <img class="nike" src="images/nike.png" alt="">
-            <img src="images/gucci.png" alt="">
-            <img class="levis" src="images/levis.png" alt="">
-            <img class="pepe" src="images/Pepe_Jeans_logo.png" alt="">
-            <img class="gucci" src="images/park2.png" alt="">
-        </div>
+    <!---brands-->
+    <div class="wrapper">
+        <img src="/resize/Levis.png" class="item item1" alt="">
+        <img src="/resize/apple.png" class="item item2" alt="">
+        <img src="/resize/Canon.png" class="item item3" alt="">
+        <img src="/resize/Dell.png" class="item item4" alt="">
+        <img src="/resize/Gucci.png" class="item item5" alt="">
+        <img src="/resize/Gillette.png" class="item item6" alt="">
+        <img src="/resize/Intel.png" class="item item7" alt="">
+        <img src="/resize/Lacoste.png" class="item item8" alt="">
     </div>
+    <div class="wrapper1">
+        <img src="/resize/adidas.png" class="itemr item1" alt="">
+        <img src="/resize/Johnson_and_Johnson_logo.png" class="itemr item2" alt="">
+        <img src="/resize/lg.png" class="itemr item3" alt="">
+        <img src="/resize/monster.png" class="itemr item4" alt="">
+        <img src="/resize/Nestle.png" class="itemr item5" alt="">
+        <img src="/resize/Puma.png" class="itemr item6" alt="">
+        <img src="/resize/Rolex.png " class="itemr item7" alt="">
+        <img src="/resize/nike.png" class="itemr item8" alt="">
+    </div>
+
+
 
     <!-- Product Section -->
     <div class="pics">
@@ -140,8 +388,7 @@
 
                 <div class="summer-container">
 
-                    <!--------------------------------------------------------------------------------------------------------summer main-->
-
+                    <!-------------------------------------------------------------------summer main------------------------>
 
                     <div class="summer-main">
                         <img src="images/shirt2.png" alt="" class="s1">
@@ -421,7 +668,8 @@
 
 
                     <div>
-                        <h2 class="w1 design-a1" style="color: white;"><span style="font-family:'black';"> Crazy Deals</span></h2>
+                        <h2 class="w1 design-a1" style="color: white;"><span style="font-family:'black';"> Crazy
+                                Deals</span></h2>
                         <h1 class="w2" style="color: white;">Buy 1 get 1 free</h1>
                         <h2 class="w3" style="color: white;">the best classic dress is on sale at Easy mart</h2>
 
@@ -437,7 +685,8 @@
                 <div class="g2">
 
                     <div>
-                        <h2 class="w1 design-a1" style="color: white;"><span style="font-family:'black';">Spring/ Summe</span>r</h2>
+                        <h2 class="w1 design-a1" style="color: white;"><span style="font-family:'black';">Spring/
+                                Summe</span>r</h2>
                         <h1 class="w2" style="color: white;">Upcomming Seasons</h1>
                         <h2 class="w3" style="color: white;">the best classic dress is on sale at Easy mart</h2>
 
@@ -456,7 +705,8 @@
 
                     <div>
 
-                        <h1 class="w2 design-a1" style="color: white; font-size:30px;"><span style="font-family:'black';">Seasonal Sale</span></h1>
+                        <h1 class="w2 design-a1" style="color: white; font-size:30px;"><span
+                                style="font-family:'black';">Seasonal Sale</span></h1>
                         <h2 class="w3" style="color: orange; font-size:20px;">Winter collection - 50% off</h2>
 
                         <button>Shop now</button>
@@ -472,7 +722,8 @@
 
                     <div>
 
-                        <h1 class="w2 design-a1" style="color: white;"> <span style="font-family:'black';"> New foot wear collections</span></h1>
+                        <h1 class="w2 design-a1" style="color: white;"> <span style="font-family:'black';"> New foot
+                                wear collections</span></h1>
                         <h2 class="w3 " style="color: orange;">Spring/ summer 2025</h2>
 
                         <button>Shop now</button>
@@ -488,7 +739,8 @@
 
                     <div>
 
-                        <h1 class="w2 design-a1 " style="color: white;"> <span style="font-family:'black';">Shirts & T-Shirts</span></h1>
+                        <h1 class="w2 design-a1 " style="color: white;"> <span style="font-family:'black';">Shirts &
+                                T-Shirts</span></h1>
                         <h2 class="w3" style="color:orange">New trendy prints</h2>
 
                         <button>Shop now</button>
@@ -518,7 +770,7 @@
     <div class="mail-box">
 
         <div class="mail-text">
-            <h1 class="design-a1" > <span style="font-family:'black';"> Sign-up </span>for news letters</h1>
+            <h1 class="design-a1"> <span style="font-family:'black';"> Sign-up </span>for news letters</h1>
             <p>Get E-mail updates about our latest shop and <span style="color: orange;cursor:pointer;">special
                     offer</span> </p>
         </div>
@@ -542,17 +794,20 @@
 
                 <h1 style="color: white;">Easy mart</h1>
 
-                <h3 style="color: white;"><span style="color: orange;">Our Story:</span> Founded with a passion for quality and innovation, we aim to bring
+                <h3 style="color: white;"><span style="color: orange;">Our Story:</span> Founded with a passion for
+                    quality and innovation, we aim to bring
                     the best products to
                     your doorstep.<br>
 
-                   <span style="color: orange;">Mission & Vision:</span>  Our mission is to revolutionize online shopping by offering exceptional value and
+                    <span style="color: orange;">Mission & Vision:</span> Our mission is to revolutionize online
+                    shopping by offering exceptional value and
                     a seamless experience.<br>
 
-                   <span style="color: orange;">Core Values: </span> We are committed to customer satisfaction, sustainability, and excellence in everything
+                    <span style="color: orange;">Core Values: </span> We are committed to customer satisfaction,
+                    sustainability, and excellence in everything
                     we do.
                 </h3>
-                <h3 class="fa-fonts"> 
+                <h3 class="fa-fonts">
                     <i class="fa-brands fa-facebook"></i>
                     <i class="fa-brands fa-x-twitter"></i>
                     <i class="fa-brands fa-instagram"></i>
